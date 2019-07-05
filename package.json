@@ -5,6 +5,7 @@
   "repository": "https://github.com/henron1/MMC-Server-Test.git",
   "author": "Henry Neal <henry.neal0@gmail.com>",
   "license": "MIT",
+  "scripts": {"start": "node index.js"},
   "dependencies": {
     "dotenv": "^8.0.0",
     "express": "^4.17.1",

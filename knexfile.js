@@ -2,7 +2,7 @@
 
 const localPgConnection = {
   host: "localhost",
-  databse:"locations",
+  databse:"location",
   user: "henry",
   password: "hired!"
 }

@@ -1815,7 +1815,7 @@ exports.up = function(knex, Promise) {
     ("Tribeca","Greenwich & Murray","255 Greenwich St","New York","NY","10007-2377",40.7143303,-74.0111548,"New York County"),
     ("Forest Hills","S OF INTERSECTION OF AUSTIN","7000 AUSTIN ST","FOREST HILLS","NY","11375-1022",40.7210293,-73.8477705,"Queens County"),
     ("Penn State","SEC S Fraser & Beaver Ave","201 W Beaver Ave","State College","PA","16801",40.792575,-77.8614972,"Centre County"),
-    ("Freeport","SWC SWC Sunrise Hwy & Buffalo St","248 Sunrise Hwy","Freeport","NY","11520-3943",40.6555849,-73.5717874,"Nassau County");`);
+    ("Freeport","SWC SWC Sunrise Hwy & Buffalo St","248 Sunrise Hwy","Freeport","NY","11520-3943",40.6555849,-73.5717874,"Nassau County");`;
 };
 
 exports.down = function(knex, Promise) {};

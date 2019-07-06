@@ -1,17 +1,30 @@
+// return knex.schema.raw(`CREATE TABLE IF NOT EXISTS "locations" (
+//   store_name VARCHAR(31) NULL,
+//   store_location VARCHAR(50) NULL,
+//   address VARCHAR(34) NULL,
+//   city VARCHAR(22) NULL,
+//   state VARCHAR(2) NULL,
+//   zip_code VARCHAR(10) NULL,
+//   latitude FLOAT NULL,
+//   longitude FLOAT NULL,
+//   county VARCHAR(23) NULL
+// );
+
 exports.up = function(knex, Promise) {
-  return knex.schema.raw(`CREATE TABLE IF NOT EXISTS "locations" (
-    store_name VARCHAR(31) NULL,
-    store_location VARCHAR(50) NULL,
-    address VARCHAR(34) NULL,
-    city VARCHAR(22) NULL,
-    state VARCHAR(2) NULL,
-    zip_code VARCHAR(10) NULL,
-    latitude FLOAT NULL,
-    longitude FLOAT NULL,
-    county VARCHAR(23) NULL
-  );
+  returnknex.schema.raw("SET sql_mode='TRADITIONAL'")
+  .table('locations', function (table) {
+    table.string('store_name');
+    table.string('store_location');
+    table.string('address');
+    table.string('city');
+    table.string('state');
+    table.string('zipcode');
+    table.float('latitude');
+    table.float('longitude');
+    table.string('county');
+  })
     
-  INSERT INTO "locations" VALUES
+  `INSERT INTO "locations" VALUES
     ("Crystal","SWC Broadway & Bass Lake Rd","5537 W Broadway Ave","Crystal","MN","55428-3507",45.0521539,-93.364854,"Hennepin County"),
     ("Duluth","SEC Hwy 53 & Burning Tree Rd","1902 Miller Trunk Hwy","Duluth","MN","55811-1810",46.808614,-92.1681479,"St Louis County"),
     ("Bloomington","NWC 80th & Penn","2555 W 79th St","Bloomington","MN","55431-1250",44.8595041,-93.3112747,"Hennepin County"),
